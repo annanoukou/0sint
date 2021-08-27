@@ -5,35 +5,28 @@ import {Link, NavLink} from 'react-router-dom';
 const Header = () => {
   
   return (
-    <nav id="navbar_top" className="navbar navbar-expand-lg navbar-dark fixed-top">
-      <div className="container">
-  
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ml-auto" id="navbarMenu">
-            <li className="nav-item">
-              <NavLink className="nav-link" exact to="/">Home</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" exact to="/about"
-                       aria-expanded="false">About</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" to="/team">Team</NavLink>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="https://blog.tedxuniversityofpiraeus.com/">Blog</a>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" exact to="/partners">Partners</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" activeClassName="active" exact to="/contact">Contact</NavLink>
-            </li>
-          </ul>
-        </div>
+    <>
+      <div className="loader">
+         <div className="intro">
+            <div className="intro-title"><img src="images/logo.png" className="logo-img light-logo img-fluid" alt="" /></div>
+         </div>
       </div>
-    </nav>
 
+      <nav className="site-mobile-menu">
+         <div className="close-wrap d-flex">
+            <a href="#" className="d-flex ml-auto js-menu-toggle">
+               <span className="close-label">Close</span>
+               <div className="close-times">
+                  <span className="bar1"></span>
+                  <span className="bar2"></span>
+               </div>
+            </a>
+         </div>
+         <div className="site-mobile-inner"></div>
+      </nav>
+
+
+    </>
   );
 }
 
