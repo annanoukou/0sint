@@ -1,6 +1,4 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom';
-
 
 const Header = () => {
   
@@ -24,10 +22,9 @@ const Header = () => {
          </div>
          <div className="site-mobile-inner"></div>
       </nav>
-
-
     </>
   );
+  
 }
 
 export default Header;

@@ -1,38 +1,41 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useEffect, useState} from 'react';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+
+import "../assets/scss/style.scss";
 
 function Footer() {
+
+  const [visible, setVisible] = useState(false)
+
+  useEffect(() => {
+    function onScroll() {
+      if(window.scrollY > 100){
+        setVisible(true)
+      } else {
+        setVisible(false)
+      }
+    }
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  });
+
+  function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth' });
+  }
+
+
   return (
     <>
-      <footer className="footer-bottom d-flex align-items-center">
-        <div className="container">
-          <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
-           
-            <div>
-              <div className="terms-and-policies-links mb-2 d-flex flex-lg-row
-                              flex-column align-items-center justify-content-center text-center text-md-right">
-                <p className="mb-0 font-weight-bold">
-                  <Link to="/terms">Terms & Conditions</Link>
-                </p>
-                <div className="mx-2 d-lg-block d-none">&middot;</div>
-                <p className="mb-0 font-weight-bold">
-                  <Link to="/privacy">Privacy Policy</Link>
-                </p>
-              </div>
-              <div className="d-flex flex-lg-row flex-column align-items-center
-                              justify-content-center text-center text-md-right">
-                <p className="mb-0 mt-md-0 mt-2 font-weight-bold">
-                  &copy; {new Date().getFullYear()} TEDxUniversityofPiraeus
-                </p>
-                <div className="mx-2 d-lg-block d-none">&middot;</div>
-                <p className="mb-0">
-                  This independent TEDx event is operated under license from TED.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <a id="back-to-top" href="#" className={ visible ? 'fadeIn cursor-item' : 'fadeOut cursor-item' } onClick={scrollToTop}>
+        <FontAwesomeIcon icon={faChevronUp} />
+      </a>
+
+      <div className="cursor"></div>
+      <div className="cursor-follower"></div>
     </>
   )
 }

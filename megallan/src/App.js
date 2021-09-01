@@ -8,25 +8,53 @@ import "./assets/css/font-awesome.min.css";
 import "./assets/scss/style.scss";
 import "./assets/css/style.css";
 
-import * as THREE from "three";
-import React, {Fragment} from "react";
+
+// import "./assets/js/query-3.4.1.min.js";
+
+
+// import "./assets/js/isotope.pkgd.min.js";
+// import "./assets/js/imagesloaded.pkgd.min.js";
+// import "./assets/js/three.min.js";
+// import "./assets/js/anime.min.js";
+// import "./assets/js/TweenMax.min.js";
+// import "./assets/js/circletype.min.js";
+// import "./assets/js/hover-effect.umd.js";
+// import "./assets/js/gsap.min.js";
+// import "./assets/js/ScrollMagic.min.js";
+// import "./assets/js/scrollmagic.animation.gsap.min.js";
+// import "./assets/js/custom.js";
+
+
+import React, {Fragment, useEffect} from "react";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
+
 
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import Navbar from './components/Navbar';
 
+import AOS from 'aos';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease',
+      once: true,
+      offset: -100,
+      disable: 'mobile'
+    });
+  }, []);
 
   return (
     <Router>
       <Fragment>
-          <Header />
+          {/* <Header /> */}
           <Navbar />
-            <div class="site-wrap">
-              <div class="site-inner">
+            <div className="site-wrap">
+              <div className="site-inner">
                 <Switch>
                   <Route exact path="/" component={HomePage}/>
                   <Route path="/home">
