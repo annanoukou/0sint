@@ -20,7 +20,7 @@ const About = () => {
 
     useEffect(() => {
         if(isVisible){
-           
+
             let quote = document.querySelector('.highlight')
 
             // timeline.from(quote, {
@@ -119,7 +119,7 @@ const About = () => {
 
     return (
         <>
-           <div className="section">
+           <div id="about" className="section">
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-3">
@@ -133,8 +133,8 @@ const About = () => {
                         </div>
                         <div className="col-lg-4" data-aos="fade-up" data-aos-duration="1000">
                             <p>
-                            We have already published novel large-scale datasets facilitating research on hard problems such as fighting sexual grooming targeting minors and understanding human emotions. 
-                            Once we have the data, we apply our expertise of 
+                            We have already published novel large-scale datasets facilitating research on hard problems such as fighting sexual grooming targeting minors and understanding human emotions.
+                            Once we have the data, we apply our expertise of
                                 <span class="highlight"> machine learning </span>,
                                 <span class="highlight"> cybersecurity </span>,
                                 <span class="highlight"> data mining </span>,
@@ -144,7 +144,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </>
     )
 }

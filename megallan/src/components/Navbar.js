@@ -48,11 +48,10 @@ const Navbar = () => {
               </div>
               <div className="col text-right">
                   <ul className="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
-                    <li><a href="index.html" className="nav-link cursor-item">Home</a></li>
-                    <li><a href="about.html" className="nav-link cursor-item">About</a></li>
-                    <li><a href="services.html" className="nav-link cursor-item">Services</a></li>
-                    <li><a href="blog.html" className="nav-link cursor-item">Team</a></li>
-                    <li><a href="contact.html" className="nav-link cursor-item">Contact</a></li>
+                    <li><a href="#home" className="nav-link cursor-item">Home</a></li>
+                    <li><a href="#about" className="nav-link cursor-item">About</a></li>
+                    <li><a href="#services" className="nav-link cursor-item">Services</a></li>
+                    <li><a href="#contact" className="nav-link cursor-item">Contact</a></li>
                   </ul>
                   <ul className="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
                     <li><a href="#" className="js-menu-toggle">Menu</a></li>
