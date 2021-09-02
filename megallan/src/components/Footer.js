@@ -3,7 +3,8 @@ import React, {useEffect, useState} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
-import "../assets/scss/style.scss";
+import Cursor from './Cursor'
+
 
 function Footer() {
 
@@ -34,8 +35,7 @@ function Footer() {
         <FontAwesomeIcon icon={faChevronUp} />
       </a>
 
-      <div className="cursor"></div>
-      <div className="cursor-follower"></div>
+      <Cursor />
     </>
   )
 }

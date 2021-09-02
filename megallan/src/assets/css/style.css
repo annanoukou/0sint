@@ -354,8 +354,8 @@ ion-icon {
 
 #back-to-top {
   position: fixed;
-  bottom: 50px;
-  left: calc(50% - 22px);
+  bottom: 36px;
+  left: calc(50% - 20px);
   color: #fff;
   padding: 10px 15px;
   display: none;

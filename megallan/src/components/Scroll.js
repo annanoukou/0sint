@@ -22,7 +22,7 @@ const Scroll = () => {
 
     return (
         <div className="circular-text">
-            <span id="rotated">Magellan • Magellan • Magellan • Magellan • Magellan • Magellan •</span>
+            <span id="rotated">0sint • 0sint • 0sint • 0sint • 0sint • 0sint •</span>
         </div>
     );
   
