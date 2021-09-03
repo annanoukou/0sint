@@ -81,6 +81,7 @@ function Cursor() {
                 setActive()
             });
         });
+        
 
 
         let cursor_item = document.querySelectorAll(".cursor-item")

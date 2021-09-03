@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
-import CircleType from 'circletype';
-import ScrollTrigger from 'gsap/ScrollTrigger'
 
 function Contact() {
   return (
@@ -11,10 +9,10 @@ function Contact() {
           <div class="row">
              <div class="col-lg-12">
                 <div class="content-hero text-center" data-aos="fade-left" data-aos-duration="1000">
-                   <h1 class="h-title" id="quote">
+                   <h1 class="h-title">
                       Contact
                    </h1>
-                   <p>Get in touch</p>
+                   <p className="text-primary">Get in touch</p>
                 </div>
              </div>
           </div>
@@ -26,21 +24,23 @@ function Contact() {
           <div class="row justify-content-between">
 
              <div class="col-md-4">
-                <img src="images/contact.jpg" class="img-fluid" alt="" />
+               <div className="contact-map">
+                  <iframe title="googlemaps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3146.525339924691!2d23.650679415108442!3d37.94151791032185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a1bbe5bb8515a1%3A0x3e0dce8e58812705!2sUniversity%20of%20Piraeus!5e0!3m2!1sen!2sgr!4v1630683018252!5m2!1sen!2sgr" width="100%" height="350" style={{'border':0}} allowfullscreen="" loading="lazy"></iframe>
+               </div>
              </div>
              <div class="col-md-3">
                 <div class="contact-info-v1">
                    <div class="d-block">
                       <span class="d-block contact-info-label">Email</span>
-                      <a href="#" class="contact-info-val">info@example.com</a>
+                      <a href="#" class="contact-info-val">test@test.com</a>
                    </div>
                    <div class="d-block">
                       <span class="d-block contact-info-label">Phone</span>
-                      <a href="#" class="contact-info-val">+12 345 6789 012</a>
+                      <a href="#" class="contact-info-val">test</a>
                    </div>
                    <div class="d-block">
                       <span class="d-block contact-info-label">Address</span>
-                      <address class="contact-info-val">273 South Riverview Rd. <br/> New York, NY 10011</address>
+                      <address class="contact-info-val">test</address>
                    </div>
 
                    <div class="d-block">
@@ -48,7 +48,7 @@ function Contact() {
                       <div class="social">
                          <a href="#" class="mr-3"><i class="fa fa-facebook"></i></a>
                          <a href="#" class="mr-3"><i class="fa fa-twitter"></i></a>
-                         <a href="#" class="mr-3"><i class="fa fa-google-plus"></i></a>
+                         <a href="#" class="mr-3"><i class="fa fa-github"></i></a>
                          <a href="#" class="mr-3"><i class="fa fa-linkedin"></i></a>
                       </div>
                    </div>
@@ -72,7 +72,7 @@ function Contact() {
                    </div>
                    <div class="form-group row">
                       <div class="col-md-12 d-flex align-items-center">
-                         <a class="btn-draw btn--white cursor-item mt-3" href="contact.html" data-aos="fade-right" data-aos-duration="1800"><span class="btn-draw__text"><span>Send message</span></span></a>
+                         <a class="btn-draw btn--white cursor-item mt-3" href="#contact" data-aos="fade-right" data-aos-duration="1800"><span class="btn-draw__text"><span>Send message</span></span></a>
                          <span class="submitting"></span>
                       </div>
                    </div>

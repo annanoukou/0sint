@@ -25,7 +25,7 @@ import "./assets/css/style.css";
 // import "./assets/js/custom.js";
 
 
-import React, {Fragment, useEffect} from "react";
+import React, {Fragment, useState, useEffect, useRef } from "react";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 
@@ -46,12 +46,12 @@ function App() {
       offset: -100,
       disable: 'mobile'
     });
-  }, []);
+
+  },)
 
   return (
     <Router>
       <Fragment>
-          {/* <Header /> */}
           <Navbar />
             <div className="site-wrap">
               <div className="site-inner">

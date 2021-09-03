@@ -18,6 +18,14 @@ const Scroll = () => {
 
         let scroll_element = document.querySelector(".circular-text");
         scroll_element.style.transform = "rotate(" + offset + "deg)";
+
+        let nav = document.querySelector(".site-nav");
+
+        if(offset == 0){
+            nav.classList.remove("nav-scroll");
+        }else{
+            nav.classList.add("nav-scroll");
+        }
     };
 
     return (

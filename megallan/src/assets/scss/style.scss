@@ -14,7 +14,49 @@
 }
 
 .highlight{
+    font-size: 1.1rem;
     div{
         font-weight: bold;    
     }
+}
+
+.nav-scroll{
+    padding: 0!important;
+    transition: padding 1s linear;
+    .container{
+        padding-bottom: 0!important;
+        transition: padding 1s linear;
+    }
+}
+
+.active--nav{
+    background: white;
+    border-radius: 50%;
+    padding: 10px 8px!important;
+    color: #000!important;
+}
+
+.subheading{
+    span{
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+}
+
+.hit-pinata{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.vanta-js{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 20%;
+}
+
+.text-primary{
+    color: #7b7bff!important;
 }

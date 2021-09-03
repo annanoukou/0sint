@@ -6,6 +6,7 @@ const Navbar = () => {
 
   const timeline = useMemo(() => gsap.timeline({ paused: true, repeat: false, repeatDelay: 2, yoyo: true, delay: 0 }), []);
 
+ 
   useEffect(() => {
     let quote = document.getElementById('quote')
     let arr = quote.innerText.split('')
@@ -33,24 +34,27 @@ const Navbar = () => {
     });
 
     timeline.play();
+
+
   }, [])
 
 
   return (
     <>
-      <nav className="site-nav site-nav-target">
+      <nav className="site-nav site-nav-target navbar-fixed-top">
         <div className="container">
             <div className="row align-items-center justify-content-between text-left">
               <div className="col-3">
                   <div className="site-logo">
-                    <a href="index.html" className="site-logo main-logo"><img src="images/logo.png" className="logo-img light-logo img-fluid" alt="" /><span></span></a>
+                    <a href="#" className="site-logo main-logo"><img src="images/logo.png" className="logo-img light-logo img-fluid" alt="" /><span></span></a>
                   </div>
               </div>
               <div className="col text-right">
                   <ul className="site-nav-ul js-clone-nav text-left d-none d-lg-inline-block">
                     <li><a href="#home" className="nav-link cursor-item">Home</a></li>
-                    <li><a href="#about" className="nav-link cursor-item">About</a></li>
+                    <li><a href="#about" className="nav-link cursor-item" >About</a></li>
                     <li><a href="#services" className="nav-link cursor-item">Services</a></li>
+                    <li><a href="#team" className="nav-link cursor-item">Team</a></li>
                     <li><a href="#contact" className="nav-link cursor-item">Contact</a></li>
                   </ul>
                   <ul className="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
