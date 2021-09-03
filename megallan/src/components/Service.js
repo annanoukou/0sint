@@ -7,7 +7,7 @@ function Service() {
       <>
          <div className="section" id="services-section">
             <div className="container">
-              <div className="row mb-80 border-section">
+              <div className="row mb-4 border-section">
                   <div className="col-lg-6">
                     <h3 className="section-title text-primary">PinataHub</h3>
                   </div>
@@ -50,7 +50,7 @@ function Service() {
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <div className="services_active owl-carousel">
+                    <div className="services_active">
                         <div className="single_testmonial">
                           <div className="testmonial_info">
                               <img src={image1} className="img-fluid" alt="" />
