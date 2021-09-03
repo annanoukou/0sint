@@ -2,7 +2,7 @@ import './App.css';
 
 import "./assets/css/bootstrap.min.css";
 import "./assets/css/animate.min.css";
-// import "./assets/css/owl.carousel.min.css";
+import "./assets/css/owl.carousel.min.css";
 import "./assets/css/aos.css";
 import "./assets/css/font-awesome.min.css";
 import "./assets/scss/style.scss";

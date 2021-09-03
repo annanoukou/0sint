@@ -21,7 +21,7 @@ function HomePage() {
         <Contact />
         <Scroll />
       </>
-  
+
   );
 }
 
