@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Header = () => {
-  
+
   return (
-    <>
+    <div>
       <div className="loader">
          <div className="intro">
             <div className="intro-title"><img src="images/logo.png" className="logo-img light-logo img-fluid" alt="" /></div>
@@ -22,9 +22,9 @@ const Header = () => {
          </div>
          <div className="site-mobile-inner"></div>
       </nav>
-    </>
+    </div>
   );
-  
+
 }
 
 export default Header;

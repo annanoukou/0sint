@@ -67,7 +67,7 @@ const About = () => {
 
 
     return (
-        <>
+        <div>
            <div id="about" className="section">
                 <div className="container">
                     <div className="row">
@@ -88,19 +88,19 @@ const About = () => {
                                 <span class="highlight font-weight-bold"> cybersecurity </span>,
                                 <span class="highlight font-weight-bold"> data mining </span>,
                                 <span class="highlight font-weight-bold"> computational social science </span>
-                                to tackle complex problems and extract actionable intelligence, revealing 
-                                <span class="highlight font-weight-bold"> secrets</span>, 
-                                <span class="highlight font-weight-bold"> vulnerabilities</span>, 
-                                <span class="highlight font-weight-bold"> misconfigurations</span>, 
-                                <span class="highlight font-weight-bold"> insights</span>, 
-                                <span class="highlight font-weight-bold"> behavioral patterns</span>, 
+                                to tackle complex problems and extract actionable intelligence, revealing
+                                <span class="highlight font-weight-bold"> secrets</span>,
+                                <span class="highlight font-weight-bold"> vulnerabilities</span>,
+                                <span class="highlight font-weight-bold"> misconfigurations</span>,
+                                <span class="highlight font-weight-bold"> insights</span>,
+                                <span class="highlight font-weight-bold"> behavioral patterns</span>,
                                 <span class="highlight font-weight-bold"> REDACTED</span>.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

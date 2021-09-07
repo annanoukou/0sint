@@ -30,7 +30,7 @@ function Footer() {
         }
     }, [vantaEffect])
     return (
-    <>
+    <div>
         <div className="vanta-js">
             <div id="vanta" style={{height: "100vh"}}></div>
         </div>
@@ -44,12 +44,12 @@ function Footer() {
                         <br></br>
                         With our tools you will traverse the uncharted seas of the data realm,
                         <br></br>
-                        dive into the unexplored depths of 
+                        dive into the unexplored depths of
                         <div className="d-inline cursor-item">
-                            <span> systems</span>, 
-                            <span> source code</span>, 
-                            <span> datasets</span>, 
-                            <span> the human mind</span>, 
+                            <span> systems</span>,
+                            <span> source code</span>,
+                            <span> datasets</span>,
+                            <span> the human mind</span>,
                         </div> shed light on their secrets, venture into their obscured wilderness.
                       </p>
                     <a className="btn-draw btn--white cursor-item mt-3" href="#services"><span className="btn-draw__text"><span>Our services</span></span></a>
@@ -57,7 +57,7 @@ function Footer() {
               </div>
             </div>
         </div>
-    </>
+    </div>
   )
 }
 

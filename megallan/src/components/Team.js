@@ -4,7 +4,7 @@ import team from '../assets/images/test.jpg';
 
 function Team() {
   return (
-    <>
+    <div>
       <div id="team">
          <div className="container">
             <div className="row">
@@ -24,10 +24,10 @@ function Team() {
          <div className="container">
             <div className="row portfolio-items">
                <div className="col-lg-12 p-0">
-                  <div className="row team-gallery">
-                     <div class="col-md-6 single-item brand apps mobile">
+                  <div className="row team-gallery team-group">
+                     <div class="col-md-6 single-item brand apps mobile team-member">
                         <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid" />
+                           <img src={team} alt="" class="portfolio-item img-fluid team-img" />
                            <div class="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
                               <h3 class="text-white">Team member</h3>
@@ -35,29 +35,9 @@ function Team() {
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-6 single-item web mobile">
+                     <div class="col-md-6 single-item web mobile team-member">
                         <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid" />
-                           <div class="portfolio-content">
-                              <p>Lorem ipsum dolor sit amet</p>
-                              <h3 class="text-white">Team member</h3>
-                              <a href="single-portfolio.html" class="portfolio-link"></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6 single-item design mobile">
-                        <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid" />
-                           <div class="portfolio-content">
-                              <p>Lorem ipsum dolor sit amet</p>
-                              <h3 class="text-white">Team member</h3>
-                              <a href="single-portfolio.html" class="portfolio-link"></a>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="col-md-6 single-item web mobile">
-                        <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid" />
+                           <img src={team} alt="" class="portfolio-item img-fluid team-img" />
                            <div class="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
                               <h3 class="text-white">Team member</h3>
@@ -71,7 +51,7 @@ function Team() {
          </div>
       </div>
 
-   </>
+   </div>
   );
 }
 

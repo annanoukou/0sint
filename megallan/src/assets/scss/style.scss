@@ -16,13 +16,14 @@
 .highlight{
     font-size: 1.1rem;
     div{
-        font-weight: bold;    
+        font-weight: bold;
     }
 }
 
 .nav-scroll{
     padding: 0!important;
     transition: padding 1s linear;
+    background-color: black;
     .container{
         padding-bottom: 0!important;
         transition: padding 1s linear;

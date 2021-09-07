@@ -4,7 +4,7 @@ import CircleType from 'circletype';
 
 function Services() {
   return (
-    <>
+    <div>
     <div id="services" class="section-page">
        <div class="container">
          <div class="row">
@@ -56,7 +56,7 @@ function Services() {
 
        </div>
     </div>
-    </>
+    </div>
   );
 }
 

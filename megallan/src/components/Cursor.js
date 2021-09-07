@@ -6,10 +6,10 @@ import {TweenMax} from 'gsap';
 function Cursor() {
 
     const [active, setActive] = useState('')
- 
+
 
     useEffect(() => {
-        
+
         var cursor = document.querySelector(".cursor"),
         follower = document.querySelector(".cursor-follower");
 
@@ -68,8 +68,8 @@ function Cursor() {
 
         link.forEach(b => b.addEventListener('mousemove', animateit));
         link.forEach(b => b.addEventListener('mouseleave', animateit));
-      
-     
+
+
 
         let portfolio_item = document.querySelectorAll(".portfolio-item")
 
@@ -81,7 +81,7 @@ function Cursor() {
                 setActive()
             });
         });
-        
+
 
 
         let cursor_item = document.querySelectorAll(".cursor-item")
@@ -97,14 +97,13 @@ function Cursor() {
 
     }, []);
 
-   
+
     return (
-        <>
+        <div>
             <div className={`cursor ${active}`}></div>
             <div className={`cursor-follower ${active}`}></div>
-        </>
+        </div>
     )
 }
 
 export default Cursor;
-      

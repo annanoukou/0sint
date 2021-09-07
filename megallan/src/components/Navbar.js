@@ -6,7 +6,7 @@ const Navbar = () => {
 
   const timeline = useMemo(() => gsap.timeline({ paused: true, repeat: false, repeatDelay: 2, yoyo: true, delay: 0 }), []);
 
- 
+
   useEffect(() => {
     let quote = document.getElementById('quote')
     let arr = quote.innerText.split('')
@@ -40,7 +40,7 @@ const Navbar = () => {
 
 
   return (
-    <>
+    <div>
       <nav className="site-nav site-nav-target navbar-fixed-top">
         <div className="container">
             <div className="row align-items-center justify-content-between text-left">
@@ -64,7 +64,7 @@ const Navbar = () => {
             </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 

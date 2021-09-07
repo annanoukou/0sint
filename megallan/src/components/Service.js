@@ -4,7 +4,7 @@ import image1 from '../assets/images/pinata.gif';
 
 function Service() {
    return (
-      <>
+      <div>
          <div className="section" id="services-section">
             <div className="container">
               <div className="row mb-4 border-section">
@@ -61,7 +61,7 @@ function Service() {
               </div>
             </div>
         </div>
-      </>
+      </div>
    );
 }
 

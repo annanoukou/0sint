@@ -30,13 +30,13 @@ function Footer() {
 
 
   return (
-    <>
+    <div>
       <a id="back-to-top" href="#" className={ visible ? 'fadeIn cursor-item' : 'fadeOut cursor-item' } onClick={scrollToTop}>
         <FontAwesomeIcon icon={faChevronUp} />
       </a>
 
       <Cursor />
-    </>
+    </div>
   )
 }
 

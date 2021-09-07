@@ -3,7 +3,7 @@ import React from 'react';
 
 function Contact() {
   return (
-    <>
+    <div>
     <div id="contact" class="section-page">
        <div class="container">
           <div class="row">
@@ -58,16 +58,13 @@ function Contact() {
                 <form method="post" class="form-outline-style-v1 mb-5" id="contactForm">
                    <div class="form-group row mb-0">
                       <div class="col-lg-6 form-group">
-                         <label for="name">Name</label>
-                         <input name="name" type="text" class="form-control" id="name" />
+                         <input name="name" type="text" class="form-control" id="name" placeholder="Name"/>
                       </div>
                       <div class="col-lg-6 form-group">
-                         <label for="email">Email</label>
-                         <input name="email" type="email" class="form-control" id="email" />
+                         <input name="email" type="email" class="form-control" id="email" placeholder="Email"/>
                       </div>
                       <div class="col-lg-12 form-group gsap-reveal">
-                         <label for="message">Write your message...</label>
-                         <textarea name="message" id="message" cols="30" rows="7" class="form-control"></textarea>
+                         <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your message..."></textarea>
                       </div>
                    </div>
                    <div class="form-group row">
@@ -85,7 +82,7 @@ function Contact() {
           </div>
        </div>
     </div>
-    </>
+    </div>
   );
 }
 

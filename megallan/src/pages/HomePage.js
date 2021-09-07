@@ -12,15 +12,14 @@ import Init from '../components/Init'
 function HomePage() {
 
   return (
-      <>
+      <div>
         <Init />
         <About />
         <Services />
-        <Service />
         <Team />
         <Contact />
         <Scroll />
-      </>
+      </div>
 
   );
 }
