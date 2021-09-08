@@ -22,11 +22,12 @@
 
 .nav-scroll{
     padding: 0!important;
-    transition: padding 1s linear;
-    background-color: black;
+    transition: padding .5s linear;
+    background-color: rgba(0, 0, 0, 0.483);
+    border-bottom: 1px solid #fff;
     .container{
         padding-bottom: 0!important;
-        transition: padding 1s linear;
+        border-bottom: 0!important;
     }
 }
 
@@ -55,9 +56,304 @@
     height: 100vh;
     position: absolute;
     top: 0;
-    left: 20%;
 }
 
 .text-primary{
-    color: #7b7bff!important;
+    color: #0C3050!important;
+}
+
+.bg-primary {
+    background-color: #FBFBFB!important;
+}
+
+.subheading {
+    line-height: 1.6rem;
+}
+
+$animationEasing : cubic-bezier(0.86, 0, 0.07, 1);
+$animationDuration : .8s;
+
+.Wording {
+    display: flex;
+}
+  
+.List {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 250px!important;
+    position: relative;
+    overflow: hidden;
+    color: #000;
+    padding-bottom: 0px;
+    height: 26px;
+    position: relative;
+    top: 5px;
+
+    &-item {
+      position: absolute;
+          will-change: transform, opacity;
+      
+      &.is-active {
+        animation: slideIn $animationDuration $animationEasing forwards;
+      }
+      &:not(.is-active) {
+        animation: slideOut $animationDuration $animationEasing forwards;
+      }
+    }
+
+    li {
+        font-size: 1rem; 
+        background-color: #FBFBFB;
+        padding: 0px 8px;
+        margin-left: 10px;
+        width: max-content;
+    }
+}
+ 
+#about {
+    p {
+        line-height: 1.6rem;
+    }
+}
+.ListAbout__first {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: max-content;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    padding-bottom: 0;
+    height: 26px;
+    position: relative;
+    width: 250px;
+    margin: 0 10px;
+    position: relative;
+    top: 4px;
+}
+
+.List-item__first {
+    position: absolute;
+    will-change: transform, opacity;
+    font-size: 1rem; 
+    background-color: #0C3050;
+    padding: 2px 8px;
+    width: max-content;
+    text-align: center;
+}
+
+.List-item__first.is-active {
+    animation: slideIn $animationDuration $animationEasing forwards;
+}
+
+.List-item__first:not(.is-active) {
+    animation: slideOut $animationDuration $animationEasing forwards;
+}
+
+.ListAbout__second {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    padding-bottom: 0;
+    height: 26px;
+    position: relative;
+    top: 5px;
+}
+
+.List-item__second {
+    position: absolute;
+    will-change: transform, opacity;
+    font-size: 1rem; 
+    background-color: #0C3050;
+    padding: 2px 8px;
+    width: max-content;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.List-item__second.is-active {
+    animation: slideIn $animationDuration $animationEasing forwards;
+}
+
+.List-item__second:not(.is-active) {
+    animation: slideOut $animationDuration $animationEasing forwards;
+}
+  
+@keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+          opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+}
+  
+@keyframes slideOut {
+    from {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(100%);
+          opacity: 0;
+    }
+}
+
+#home { 
+    height: 60vh;
+}
+
+#about {
+    position: relative;
+    top: 200px;
+    transform: skewY(-7deg);
+    box-shadow: 11px 41px 55px -60px, rgb(0, 0, 0 / 98%) inset;
+    p {
+        color: #000;
+    }
+    .container {
+        transform: skewY(7deg);
+        padding-top: 10rem;
+        padding-bottom: 9rem;
+    }
+}
+
+#team {
+    h2 {
+        color: #000;
+    }
+    .content-hero {
+        padding: 50px 0 0px 0!important;
+    }
+}
+.portfolio-wrap h3 {
+    color: #0C3050 !important;
+}
+.portfolio-content p {
+    color: #000!important;
+}
+
+#services {
+    h2 {
+        color: #000;
+    }
+}
+
+#services-section {
+    h5 {
+        color: #0C3050 !important;
+    }
+    .cardd p {
+        color: #000;
+    }
+}
+
+#newsletter {
+
+    background-color: #07193C;
+    padding: 5rem 0 3rem 0;
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    .input-group {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 40px;
+
+        input {
+            border: 0;
+            border-top-left-radius: .5rem;
+            border-bottom-left-radius: .5rem;
+            height: 49px;
+            background-color: #FBFBFB;
+            padding: 1.4rem 1.6rem;
+        }
+
+        .input-group-append {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-top-right-radius: .5rem;
+            border-bottom-right-radius: .5rem;
+            height: 49px;
+
+            button {
+                height: max-content;
+                border:0;
+                border-left: 1px solid #414145;
+                border-radius: 0;
+                color: #414145;
+                padding-right: 1.5rem;
+                position: relative;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .List {
+        height: 36px;
+        display: block;
+    }
+    .List li {
+      margin-left: 0;
+      font-size: 24px;
+      padding: 5px 10px;
+    }
+    #about .container {
+        padding-top: 5rem;
+        padding-bottom: 3rem;
+    }
+    .ListAbout__second li{
+        margin-left: 0;
+    }
+    .h-title {
+        mix-blend-mode: unset!important;
+    }
+    #services .content-hero {
+        position: relative;
+        width: 100%;
+        padding: 250px 0 0px 0!important;
+    }
+    #services-section img {
+        height: inherit!important;
+        width: max-content!important;
+    }
+    #newsletter .input-group{
+        width: 100%;
+    }
+    .site-nav {
+        background: #0000!important;
+    }
+    .nav-scroll {
+        background: #00000082!important;
+        padding-top: 0px!important;
+        padding-bottom: 0px!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .h-title {
+        mix-blend-mode: unset!important;
+    }
+    footer.section {
+        padding: 7rem 0 2rem 0;
+    }
+    .nav-scroll {
+        background: #00000082!important;
+        padding-top: 30px!important;
+        padding-bottom: 0px!important;
+    }
+}
+@media (max-width: 576px) {
 }

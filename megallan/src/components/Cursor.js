@@ -99,10 +99,10 @@ function Cursor() {
 
 
     return (
-        <div>
+        <>
             <div className={`cursor ${active}`}></div>
             <div className={`cursor-follower ${active}`}></div>
-        </div>
+        </>
     )
 }
 

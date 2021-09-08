@@ -4,8 +4,8 @@ import team from '../assets/images/test.jpg';
 
 function Team() {
   return (
-    <div>
-      <div id="team">
+    <>
+      <div id="team" className="bg-primary">
          <div className="container">
             <div className="row">
                <div className="col-lg-12">
@@ -20,7 +20,7 @@ function Team() {
          </div>
       </div>
 
-      <div className="section">
+      <div className="section bg-primary">
          <div className="container">
             <div className="row portfolio-items">
                <div className="col-lg-12 p-0">
@@ -31,7 +31,11 @@ function Team() {
                            <div class="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
                               <h3 class="text-white">Team member</h3>
-                              <a href="single-portfolio.html" class="portfolio-link"></a>
+                              <a class="btn-draw btn--dark cursor-item" href="#">
+                                 <span class="btn-draw__text">
+                                    <span>Link</span>
+                                 </span>
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -41,7 +45,11 @@ function Team() {
                            <div class="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
                               <h3 class="text-white">Team member</h3>
-                              <a href="single-portfolio.html" class="portfolio-link"></a>
+                              <a class="btn-draw btn--dark cursor-item" href="#">
+                                 <span class="btn-draw__text">
+                                    <span>Link</span>
+                                 </span>
+                              </a>
                            </div>
                         </div>
                      </div>
@@ -51,7 +59,7 @@ function Team() {
          </div>
       </div>
 
-   </div>
+   </>
   );
 }
 

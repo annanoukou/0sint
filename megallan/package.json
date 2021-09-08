@@ -13,6 +13,7 @@
     "bootstrap": "^5.1.0",
     "circletype": "^2.3.0",
     "font-awesome": "^4.7.0",
+    "gsap": "^3.7.1",
     "helmet": "^4.6.0",
     "node-sass": "^6.0.1",
     "react": "^17.0.2",

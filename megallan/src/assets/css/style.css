@@ -383,6 +383,10 @@ ion-icon {
   overflow: hidden;
 }
 
+.loader img {
+  width: 60px;
+}
+
 .loader marquee {
   opacity: 0.2;
   text-transform: uppercase;
@@ -474,7 +478,7 @@ ion-icon {
 
 .cover-init .container,
 .cover-init .container>.row {
-  height: 100vh;
+  height: 90vh;
   min-height: 650px;
 }
 
@@ -496,7 +500,7 @@ ion-icon {
 @media (max-width: 767px) {
   .cover-init .heading {
     font-size: 2.5rem;
-    color: #000!important;
+    color: #fff!important;
     mix-blend-mode: color-burn;
     margin-top: 100px;
   }
@@ -527,7 +531,7 @@ ion-icon {
 
 @media (max-width: 991.98px) {
   .cover-init .subheading {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -780,10 +784,30 @@ a:hover .btn-draw.btn--white {
   color: #fff;
 }
 
+.btn-draw.btn--dark {
+  color: #000;
+}
+
+.btn-draw.btn--dark:before,
+.btn-draw.btn--dark:after,
+.btn-draw.btn--dark .btn-draw__text:before,
+.btn-draw.btn--dark .btn-draw__text:after,
+.btn-draw.btn--dark .btn-draw__text>span:before,
+.btn-draw.btn--dark .btn-draw__text>span:after {
+  background-color: #000;
+}
+.btn-draw.btn--dark:hover span{
+  color: #000!important;
+}
+.btn-draw.btn--dark:hover,
+a:hover .btn-draw.btn--dark {
+  color: #000;
+}
+
 .content-hero {
   position: relative;
   width: 100%;
-  padding: 200px 0 0px 0;
+  padding: 150px 0 0px 0;
 }
 
 .content-hero p {
@@ -1590,7 +1614,7 @@ hr {
 
 .cardd {
   border-right: none;
-  height: 300px;
+  height: 100%;
   -webkit-transition: 1s !important;
 }
 
@@ -1628,19 +1652,19 @@ hr {
   height: 500px;
   z-index: -1;
   animation: anim 3.2s ease-in-out;
-  opacity: 0.1!important;
+  opacity: 0.4!important;
 }
 
 .card1.cardd:hover::before {
-  background: url(../images/pinata.gif);
+  background: url(../images/test.jpg);
 }
 
 .card2.cardd:hover::before {
-  background: url(../images/pinata-2.gif);
+  background: url(../images/test.jpg);
 }
 
 .card3.cardd:hover::before {
-  background: url(../images/pinata-3.gif);
+  background: url(../images/test.jpg);
 }
 
 @keyframes anim {
@@ -1663,7 +1687,7 @@ hr {
     display: none !important;
   }
   .cardd {
-    height: 200px;
+    height: max-content;
   }
   .row .cardd h5 {
     margin: 28px 0 2px 4px;
@@ -1689,12 +1713,12 @@ hr {
   padding-right: 0;
   position: relative;
   overflow: hidden;
-  margin: 0 auto 80px;
+  margin: 0 auto 80px;;
 }
 
 @media only screen and (max-width: 767px) {
   .portfolio-wrap {
-    padding-bottom: 80px;
+    padding-bottom: 0;
     padding-right: 0;
     padding-left: 0px;
     position: relative;
@@ -1702,9 +1726,6 @@ hr {
 }
 
 .portfolio-content {
-  position: absolute;
-  left: 0px;
-  /*top: 80px;*/
   z-index: 20;
   margin-top: 20px;
   width: 100%;
@@ -1719,7 +1740,7 @@ hr {
 }
 
 .portfolio-link {
-  color: #ff9800;
+  color: #000;
   font-size: 16px;
   font-weight: 300;
   position: relative;
@@ -1735,6 +1756,8 @@ hr {
   z-index: 10;
   position: relative;
   display: block;
+  width: 200px;
+  margin: 0 auto;
 }
 
 .portfolio-wrap:hover img {
@@ -1747,7 +1770,7 @@ hr {
 }
 
 .portfolio-items .col-md-6:nth-child(2), .portfolio-items .col-md-6:nth-child(4) {
-  margin-top: 75px;
+  /* margin-top: 75px; */
 }
 
 .portfolio-title-single {
@@ -2601,8 +2624,8 @@ span.error {
 }
 
 .team-img{
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 200px;
   border-radius: 50%
 }
 
@@ -2621,3 +2644,4 @@ span.error {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
 }
+

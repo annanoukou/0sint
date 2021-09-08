@@ -38,9 +38,55 @@ const Navbar = () => {
 
   }, [])
 
+  function openNav(e) {
+    e.preventDefault();
+    
+    var body = document.querySelector('body');
+    if (body.classList.contains('offcanvas')) {
+
+      body.classList.remove('offcanvas');
+      document.querySelector('.js-menu-toggle').classList.remove('active');
+      
+    } else {
+
+      body.classList.add('offcanvas');
+      document.querySelector('.js-menu-toggle').classList.add('active');
+
+    }
+  }
+
+  function closeMobileNav() {
+    var body = document.querySelector('body');
+    
+    body.classList.remove('offcanvas');
+    document.querySelector('.js-menu-toggle').classList.remove('active');
+  }
+
+
 
   return (
-    <div>
+    <>
+      <nav class="site-mobile-menu">
+         <div class="close-wrap d-flex">
+            <a href="#" class="d-flex ml-auto js-menu-toggle">
+               <span class="close-label" onClick={closeMobileNav}>Close</span>
+               <div class="close-times">
+                  <span class="bar1"></span>
+                  <span class="bar2"></span>
+               </div>
+            </a>
+         </div>
+         <div class="site-mobile-inner">
+            <ul class="site-nav-wrap">
+              <li><a href="#" class="nav-link cursor-item">Home</a></li>
+              <li><a href="#" class="nav-link cursor-item">About</a></li>
+              <li><a href="#" class="nav-link cursor-item">Services</a></li>
+              <li><a href="#" class="nav-link cursor-item">Team</a></li>
+              <li><a href="#" class="nav-link cursor-item">Contact</a></li>
+            </ul>
+         </div>
+      </nav>
+
       <nav className="site-nav site-nav-target navbar-fixed-top">
         <div className="container">
             <div className="row align-items-center justify-content-between text-left">
@@ -58,13 +104,13 @@ const Navbar = () => {
                     <li><a href="#contact" className="nav-link cursor-item">Contact</a></li>
                   </ul>
                   <ul className="site-nav-ul-none-onepage text-right d-inline-block d-lg-none">
-                    <li><a href="#" className="js-menu-toggle">Menu</a></li>
+                    <li><a href="#" className="js-menu-toggle" onClick={openNav}>Menu</a></li>
                   </ul>
               </div>
             </div>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 
