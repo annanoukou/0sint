@@ -23,7 +23,7 @@ function Footer() {
         $listItem.forEach(e => e.classList.remove('is-active') )
         $listItem[i].classList.add('is-active');
         (i === $listLength - 1 ) ? i = 0 : i++;
-      }, 2000)
+      }, 3000)
     })
 
     useEffect(() => {
@@ -58,7 +58,7 @@ function Footer() {
             <div className="row align-items-center">
                 <div className="col-md-8">
                   <h1 className="heading text-white">Obscured <br></br> <span id="quote">Intelligence</span></h1>
-                    <p className="subheading text-white">
+                    <p className="subheading text-white mb-0 mb-md-4">
                       Our mission is to lead a new age of discovery in the Cyber World
                       <br></br>
                       With our tools you will traverse the uncharted seas of the data realm,

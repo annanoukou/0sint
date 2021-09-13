@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 import CircleType from 'circletype';
 
@@ -24,7 +24,7 @@ const Scroll = () => {
 
         let nav = document.querySelector(".site-nav");
 
-        if(offset == 0){
+        if(offset === 0){
             nav.classList.remove("nav-scroll");
             scroll_element.classList.add("d-none")
         }else{

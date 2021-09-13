@@ -9,12 +9,13 @@ body {
 body {
   font-family: "Poppins", sans-serif;
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px;
   font-weight: 600;
   position: relative;
   letter-spacing: .025em;
   background-color: #000;
+  overflow-x: hidden;
 }
 
 body:before {
@@ -351,6 +352,13 @@ ion-icon {
   color: #fff;
 }
 
+@media (max-width: 992px) {
+  #back-to-top {
+
+  }
+}
+
+
 @media(max-width: 768px) {
   .hero-desc {
     padding-left: 80px;
@@ -502,7 +510,7 @@ ion-icon {
     font-size: 2.5rem;
     color: #fff!important;
     mix-blend-mode: color-burn;
-    margin-top: 100px;
+    margin-top: 60px;
   }
 }
 
@@ -523,15 +531,17 @@ ion-icon {
 }
 
 .cover-init .subheading {
-  font-size: 14px;
+  font-size: 18px;
   color: #000;
   letter-spacing: 1px;
   font-weight: 300;
+  line-height: 34px;
 }
 
 @media (max-width: 991.98px) {
   .cover-init .subheading {
-    font-size: 18px;
+    font-size: 16px;
+    line-height: 26px;
   }
 }
 
@@ -661,6 +671,7 @@ ion-icon {
 .btn-draw .btn-draw__text {
   position: relative;
   display: block;
+  font-size: 14px;
   padding: 0.7555em 2.29em;
   line-height: 1.5;
   -webkit-transition: -webkit-transform 0.5s ease;
@@ -1058,7 +1069,7 @@ hr {
   padding: 10px 20px;
   display: block;
   color: #fff;
-  font-size: 12px;
+  font-size: 14px;
   position: relative;
   text-transform: uppercase;
   font-weight: 400;
@@ -1638,7 +1649,7 @@ hr {
 .cardd p {
   color: grey;
   margin-left: 4px;
-  font-size: 14px;
+  font-size: 1rem;
   margin-bottom: 70px !important;
 }
 
@@ -2018,6 +2029,11 @@ hr {
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
   margin-top: -100px;
+}
+@media screen and (max-width: 992px) {
+  .hr-footer {
+    width: 90%;
+  }
 }
 
 
@@ -2518,7 +2534,7 @@ span.error {
 }
 
 .contact-info-v1 .contact-info-label {
-  font-size: 11px;
+  font-size: 14px;
   letter-spacing: .1rem;
   font-weight: 900;
   text-transform: uppercase;

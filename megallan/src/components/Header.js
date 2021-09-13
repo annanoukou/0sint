@@ -4,12 +4,6 @@ const Header = () => {
 
   return (
     <div>
-      <div className="loader">
-         <div className="intro">
-            <div className="intro-title"><img src="images/logo.png" className="logo-img light-logo img-fluid" alt="" /></div>
-         </div>
-      </div>
-
       <nav className="site-mobile-menu">
          <div className="close-wrap d-flex">
             <a href="#" className="d-flex ml-auto js-menu-toggle">

@@ -86,28 +86,30 @@ $animationDuration : .8s;
     overflow: hidden;
     color: #000;
     padding-bottom: 0px;
-    height: 26px;
+    height: 24px;
     position: relative;
     top: 5px;
+    list-style: none;
 
     &-item {
-      position: absolute;
-          will-change: transform, opacity;
-      
-      &.is-active {
-        animation: slideIn $animationDuration $animationEasing forwards;
-      }
-      &:not(.is-active) {
-        animation: slideOut $animationDuration $animationEasing forwards;
-      }
+        position: absolute;
+        will-change: transform, opacity;
+        
+        &.is-active {
+            animation: slideIn $animationDuration $animationEasing forwards;
+        }
+        &:not(.is-active) {
+            animation: slideOut $animationDuration $animationEasing forwards;
+        }
     }
 
     li {
-        font-size: 1rem; 
+        font-size: 18px; 
         background-color: #FBFBFB;
         padding: 0px 8px;
         margin-left: 10px;
         width: max-content;
+        top: -5px;
     }
 }
  
@@ -127,7 +129,7 @@ $animationDuration : .8s;
     padding-bottom: 0;
     height: 26px;
     position: relative;
-    width: 250px;
+    width: 260px!important;
     margin: 0 10px;
     position: relative;
     top: 4px;
@@ -155,7 +157,7 @@ $animationDuration : .8s;
     display: inline-block;
     margin: 0;
     padding: 0;
-    width: 200px;
+    width: 220px!important;
     position: relative;
     overflow: hidden;
     color: white;
@@ -172,7 +174,7 @@ $animationDuration : .8s;
     background-color: #0C3050;
     padding: 2px 8px;
     width: max-content;
-    margin-left: 10px;
+    // margin-left: 10px;
     margin-right: 10px;
 }
 
@@ -261,7 +263,7 @@ $animationDuration : .8s;
     padding: 5rem 0 3rem 0;
 
     p {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
     }
 
     .input-group {
@@ -307,7 +309,7 @@ $animationDuration : .8s;
     }
     .List li {
       margin-left: 0;
-      font-size: 24px;
+      font-size: 22px;
       padding: 5px 10px;
     }
     #about .container {
@@ -356,4 +358,7 @@ $animationDuration : .8s;
     }
 }
 @media (max-width: 576px) {
+    .ListAbout__first {
+        margin-left: 0;
+    }
 }

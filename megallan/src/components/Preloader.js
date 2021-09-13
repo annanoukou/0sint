@@ -9,7 +9,7 @@ const Preloader = () => {
 
         TweenMax.to(".loader", 1.8, {
             delay: 1,
-            top: "-100%",
+            top: "-103%",
         });
 
     }, []);

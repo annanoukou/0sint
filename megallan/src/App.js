@@ -8,28 +8,11 @@ import "./assets/css/font-awesome.min.css";
 import "./assets/scss/style.scss";
 import "./assets/css/style.css";
 
-
-// import "./assets/js/query-3.4.1.min.js";
-
-
-// import "./assets/js/isotope.pkgd.min.js";
-// import "./assets/js/imagesloaded.pkgd.min.js";
-// import "./assets/js/three.min.js";
-// import "./assets/js/anime.min.js";
-// import "./assets/js/TweenMax.min.js";
-// import "./assets/js/circletype.min.js";
-// import "./assets/js/hover-effect.umd.js";
-// import "./assets/js/gsap.min.js";
-// import "./assets/js/ScrollMagic.min.js";
-// import "./assets/js/scrollmagic.animation.gsap.min.js";
-// import "./assets/js/custom.js";
-
-
-import React, {Fragment, useState, useEffect, useRef } from "react";
+import React, {Fragment, useEffect } from "react";
 import {BrowserRouter as Router, Redirect, Route, Switch} from "react-router-dom";
 
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import Navbar from './components/Navbar';
