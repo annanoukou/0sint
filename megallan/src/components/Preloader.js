@@ -9,9 +9,9 @@ const Preloader = () => {
 
         TweenMax.to(".loader", 1.8, {
             delay: 1,
-            top: "-103%",
+            top: "-120%",
         });
-
+ 
     }, []);
 
     return (

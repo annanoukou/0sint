@@ -21,7 +21,7 @@
 }
 
 .nav-scroll{
-    padding: 0!important;
+    padding-top: 0!important;
     transition: padding .5s linear;
     background-color: rgba(0, 0, 0, 0.483);
     border-bottom: 1px solid #fff;
@@ -213,6 +213,7 @@ $animationDuration : .8s;
 }
 
 #about {
+    z-index: 100;
     position: relative;
     top: 200px;
     transform: skewY(-7deg);
@@ -353,7 +354,7 @@ $animationDuration : .8s;
     }
     .nav-scroll {
         background: #00000082!important;
-        padding-top: 30px!important;
+        padding-top: 0px!important;
         padding-bottom: 0px!important;
     }
 }

@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import BIRDS from 'vanta/dist/vanta.fog.min'
 
 
 function Footer() {
 
     const [vantaEffect, setVantaEffect] = useState(0)
+    const [time, setTime] = useState(0);
+    const timer_init = useRef(null);
     
     useEffect(() => {
       const $list = document.querySelector('.List')
@@ -14,16 +16,20 @@ function Footer() {
       let i = 1
 
       $listItem.forEach(e => $listArray.push(e.offsetWidth))
-
       const widestListWidth = Math.max(...$listArray)
-
       $list.style.width = widestListWidth + 'px';
 
-      setInterval(_ => {
-        $listItem.forEach(e => e.classList.remove('is-active') )
-        $listItem[i].classList.add('is-active');
-        (i === $listLength - 1 ) ? i = 0 : i++;
-      }, 3000)
+      if (!timer_init.current) {
+        timer_init.current = setInterval(() => {
+          $listItem.forEach(e => e.classList.remove('is-active') )
+          $listItem[i].classList.add('is-active');
+          (i === $listLength - 1 ) ? i = 0 : i++;
+        }, 3000);
+      } else {
+        clearInterval(timer_init.current);
+        timer_init.current = null;
+      }
+
     })
 
     useEffect(() => {
@@ -55,7 +61,7 @@ function Footer() {
         </div>
         <div id="home" className="cover-init">
           <div className="container">
-            <div className="row align-items-center">
+            <div className="row align-items-center pb-4">
                 <div className="col-md-8">
                   <h1 className="heading text-white">Obscured <br></br> <span id="quote">Intelligence</span></h1>
                     <p className="subheading text-white mb-0 mb-md-4">
@@ -67,11 +73,11 @@ function Footer() {
                       <br></br>
                       dive into the unexplored depths of
 
-                      <ul class="Wording-list List">
-                        <li class="List-item is-active">systems</li>
-                        <li class="List-item">source code</li>
-                        <li class="List-item">datasets</li>
-                        <li class="List-item">the human mind</li>
+                      <ul className="Wording-list List">
+                        <li className="List-item is-active">systems</li>
+                        <li className="List-item">source code</li>
+                        <li className="List-item">datasets</li>
+                        <li className="List-item">the human mind</li>
                       </ul>
                       <br></br>
 

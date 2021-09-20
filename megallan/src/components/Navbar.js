@@ -66,23 +66,23 @@ const Navbar = () => {
 
   return (
     <>
-      <nav class="site-mobile-menu">
-         <div class="close-wrap d-flex">
-            <a href="#" class="d-flex ml-auto js-menu-toggle">
-               <span class="close-label" onClick={closeMobileNav}>Close</span>
-               <div class="close-times">
-                  <span class="bar1"></span>
-                  <span class="bar2"></span>
+      <nav className="site-mobile-menu">
+         <div className="close-wrap d-flex">
+            <a href="#" className="d-flex ml-auto js-menu-toggle">
+               <span className="close-label" onClick={closeMobileNav}>Close</span>
+               <div className="close-times">
+                  <span className="bar1"></span>
+                  <span className="bar2"></span>
                </div>
             </a>
          </div>
-         <div class="site-mobile-inner">
-            <ul class="site-nav-wrap">
-              <li><a href="#" class="nav-link cursor-item">Home</a></li>
-              <li><a href="#" class="nav-link cursor-item">About</a></li>
-              <li><a href="#" class="nav-link cursor-item">Services</a></li>
-              <li><a href="#" class="nav-link cursor-item">Team</a></li>
-              <li><a href="#" class="nav-link cursor-item">Contact</a></li>
+         <div className="site-mobile-inner">
+            <ul className="site-nav-wrap">
+              <li><a href="#" className="nav-link cursor-item">Home</a></li>
+              <li><a href="#" className="nav-link cursor-item">About</a></li>
+              <li><a href="#" className="nav-link cursor-item">Services</a></li>
+              <li><a href="#" className="nav-link cursor-item">Team</a></li>
+              <li><a href="#" className="nav-link cursor-item">Contact</a></li>
             </ul>
          </div>
       </nav>

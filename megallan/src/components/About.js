@@ -1,37 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 
-
-// function isInViewport(element) {
-//     const rect = element.getBoundingClientRect();
-//     return (
-//         rect.top >= 0 &&
-//         rect.left >= 0 &&
-//         rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-//         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-//     );
-// }
-
-// function useInterval(callback, delay) {
-//     const savedCallback = useRef();
-  
-//     // Remember the latest callback.
-//     useEffect(() => {
-//       savedCallback.current = callback;
-//     }, [callback]);
-  
-//     // Set up the interval.
-//     useEffect(() => {
-//       function tick() {
-//         savedCallback.current();
-//       }
-//       if (delay !== null) {
-//         let id = setInterval(tick, delay);
-//         return () => clearInterval(id);
-//       }
-//     }, [delay]);
-// }
 
 const About = () => {
+
+    const [time, setTime] = useState(0);
+    const timer = useRef(null);
+    const timer_sec = useRef(null);
    
     useEffect(() => {
         const $list = document.querySelector('.ListAbout__first')
@@ -41,17 +15,19 @@ const About = () => {
         let i = 1
    
         $listItem.forEach(e => $listArray.push(e.offsetWidth))
-  
         const widestListWidth = Math.max(...$listArray)
-  
         $list.style.width = widestListWidth + 'px';
-  
-        setInterval(() => {
-          $listItem.forEach(e => e.classList.remove('is-active') )
-          $listItem[i].classList.add('is-active');
-          (i === $listLength - 1 ) ? i = 0 : i++;
-        }, 4000)
-     
+
+        if (!timer.current) {
+            timer.current = setInterval(() => {
+                $listItem.forEach(e => e.classList.remove('is-active') )
+                $listItem[i].classList.add('is-active');
+                (i === $listLength - 1 ) ? i = 0 : i++;
+            }, 2000);
+        } else {
+            clearInterval(timer.current);
+            timer.current = null;
+        }
 
         // Second list
         const $list2 = document.querySelector('.ListAbout__second')
@@ -61,16 +37,20 @@ const About = () => {
         let i2 = 1
    
         $listItem2.forEach(e => $listArray2.push(e.offsetWidth))
-  
         const widestListWidth2 = Math.max(...$listArray2)
-  
         $list2.style.width = widestListWidth2 + 'px';
   
-        setInterval(() => {
-          $listItem2.forEach(e => e.classList.remove('is-active') )
-          $listItem2[i].classList.add('is-active');
-          (i2 === $listLength2 - 1 ) ? i2 = 0 : i2++;
-        }, 5000)
+        if (!timer_sec.current) {
+            timer_sec.current = setInterval(() => {
+                $listItem2.forEach(e => e.classList.remove('is-active') )
+                $listItem2[i].classList.add('is-active');
+                (i2 === $listLength2 - 1 ) ? i2 = 0 : i2++;
+            }, 3000);
+        } else {
+            clearInterval(timer_sec.current);
+            timer_sec.current = null;
+        }
+
     })
 
     return (
@@ -92,21 +72,21 @@ const About = () => {
                             </p> 
                             <p>
                                 Once we have the data, we apply our expertise of
-                                <ul class="Wording-list ListAbout__first">
-                                    <li class="List-item__first is-active">machine learning</li>
-                                    <li class="List-item__first">cybersecurity</li>
-                                    <li class="List-item__first">data mining</li>
-                                    <li class="List-item__first">computational social science</li>
+                                <ul className="Wording-list ListAbout__first">
+                                    <li className="List-item__first is-active">machine learning</li>
+                                    <li className="List-item__first">cybersecurity</li>
+                                    <li className="List-item__first">data mining</li>
+                                    <li className="List-item__first">computational social science</li>
                                 </ul>
                                 <br></br>
                                 to tackle complex problems and extract actionable intelligence, revealing
                                 <br></br>
-                                <ul class="Wording-list ListAbout__second">
-                                    <li class="List-item__second is-active">secrets</li>
-                                    <li class="List-item__second">vulnerabilities</li>
-                                    <li class="List-item__second">misconfigurations</li>
-                                    <li class="List-item__second">insights</li>
-                                    <li class="List-item__second">behavioral patterns</li>
+                                <ul className="Wording-list ListAbout__second">
+                                    <li className="List-item__second is-active">secrets</li>
+                                    <li className="List-item__second">vulnerabilities</li>
+                                    <li className="List-item__second">misconfigurations</li>
+                                    <li className="List-item__second">insights</li>
+                                    <li className="List-item__second">behavioral patterns</li>
                                 </ul>
                                 .
                                 

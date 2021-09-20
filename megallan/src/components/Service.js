@@ -31,7 +31,7 @@ function Service() {
                           <div className="project-title">
                               <h5>Test Pinata</h5>
                               <p>
-                              Despite the recent measures from GitHub and DevOps teams to prevent secrets leakage, people are still committing secrets on GitHub. <span class="hit-pinata">Hit the Pinata to see a random result</span>.
+                              Despite the recent measures from GitHub and DevOps teams to prevent secrets leakage, people are still committing secrets on GitHub. <span className="hit-pinata">Hit the Pinata to see a random result</span>.
                               </p>
                           </div>
                           <div className="project-categ"></div>

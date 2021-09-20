@@ -25,28 +25,28 @@ function Team() {
             <div className="row portfolio-items">
                <div className="col-lg-12 p-0">
                   <div className="row team-gallery team-group">
-                     <div class="col-md-6 single-item brand apps mobile team-member">
-                        <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid team-img" />
-                           <div class="portfolio-content">
+                     <div className="col-md-6 single-item brand apps mobile team-member">
+                        <div className="portfolio-wrap gsap-reveal">
+                           <img src={team} alt="" className="portfolio-item img-fluid team-img" />
+                           <div className="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
-                              <h3 class="text-white">Team member</h3>
-                              <a class="btn-draw btn--dark cursor-item" href="#">
-                                 <span class="btn-draw__text">
+                              <h3 className="text-white">Team member</h3>
+                              <a className="btn-draw btn--dark cursor-item" href="#">
+                                 <span className="btn-draw__text">
                                     <span>Link</span>
                                  </span>
                               </a>
                            </div>
                         </div>
                      </div>
-                     <div class="col-md-6 single-item web mobile team-member">
-                        <div class="portfolio-wrap gsap-reveal">
-                           <img src={team} alt="" class="portfolio-item img-fluid team-img" />
-                           <div class="portfolio-content">
+                     <div className="col-md-6 single-item web mobile team-member">
+                        <div className="portfolio-wrap gsap-reveal">
+                           <img src={team} alt="" className="portfolio-item img-fluid team-img" />
+                           <div className="portfolio-content">
                               <p>Lorem ipsum dolor sit amet</p>
-                              <h3 class="text-white">Team member</h3>
-                              <a class="btn-draw btn--dark cursor-item" href="#">
-                                 <span class="btn-draw__text">
+                              <h3 className="text-white">Team member</h3>
+                              <a className="btn-draw btn--dark cursor-item" href="#">
+                                 <span className="btn-draw__text">
                                     <span>Link</span>
                                  </span>
                               </a>
