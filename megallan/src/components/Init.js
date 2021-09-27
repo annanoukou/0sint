@@ -2,35 +2,37 @@ import React, { useState, useEffect, useRef } from 'react';
 import BIRDS from 'vanta/dist/vanta.fog.min'
 
 
-function Footer() {
+function Init() {
 
     const [vantaEffect, setVantaEffect] = useState(0)
     const [time, setTime] = useState(0);
     const timer_init = useRef(null);
     
     useEffect(() => {
-      const $list = document.querySelector('.List')
-      const $listItem = document.querySelectorAll('.List-item')
-      const $listLength = $listItem.length
-      const $listArray = []
-      let i = 1
 
-      $listItem.forEach(e => $listArray.push(e.offsetWidth))
-      const widestListWidth = Math.max(...$listArray)
-      $list.style.width = widestListWidth + 'px';
+      // const $listInit = document.querySelector('.List')
+      // const $listItemInit = document.querySelectorAll('.List-item')
+      // const $listLengthInit = $listItemInit.length
+      // const $listArrayInit = []
+      // let i = 1
 
-      if (!timer_init.current) {
-        timer_init.current = setInterval(() => {
-          $listItem.forEach(e => e.classList.remove('is-active') )
-          $listItem[i].classList.add('is-active');
-          (i === $listLength - 1 ) ? i = 0 : i++;
-        }, 3000);
-      } else {
-        clearInterval(timer_init.current);
-        timer_init.current = null;
-      }
+      // $listItemInit.forEach(e => $listArrayInit.push(e.offsetWidth))
+      // const widestListWidth = Math.max(...$listArrayInit)
+      // $listInit.style.width = widestListWidth + 'px';
+
+      // if (!timer_init.current) {
+      //   timer_init.current = setInterval(() => {
+      //     $listItemInit.forEach(e => e.classList.remove('is-active') )
+      //     $listItemInit[i].classList.add('is-active');
+      //     (i === $listLengthInit - 1 ) ? i = 0 : i++;
+      //   }, 3000);
+      // } else {
+      //   clearInterval(timer_init.current);
+      //   timer_init.current = null;
+      // }
 
     })
+
 
     useEffect(() => {
         if (!vantaEffect) {
@@ -49,9 +51,32 @@ function Footer() {
             speed: 5.00
           }))
         }
-        return () => {
-          if (vantaEffect) vantaEffect.destroy()
+        if (vantaEffect) {
+          const $listInit = document.querySelector('.List')
+          const $listItemInit = document.querySelectorAll('.List-item')
+          const $listLengthInit = $listItemInit.length
+          const $listArrayInit = []
+          let i = 1
+
+          $listItemInit.forEach(e => $listArrayInit.push(e.offsetWidth))
+          const widestListWidth = Math.max(...$listArrayInit)
+          $listInit.style.width = widestListWidth + 'px';
+
+          if (!timer_init.current) {
+            timer_init.current = setInterval(() => {
+              $listItemInit.forEach(e => e.classList.remove('is-active') )
+              $listItemInit[i].classList.add('is-active');
+              (i === $listLengthInit - 1 ) ? i = 0 : i++;
+            }, 3000);
+          } else {
+            clearInterval(timer_init.current);
+            timer_init.current = null;
+          }
         }
+
+        // return () => {
+        //   if (vantaEffect) vantaEffect.destroy()
+        // }
     }, [vantaEffect])
 
     return (
@@ -91,4 +116,4 @@ function Footer() {
   )
 }
 
-export default Footer;
+export default Init;

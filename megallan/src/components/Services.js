@@ -9,7 +9,7 @@ function Services() {
       <div id="services" className="section-page bg-primary">
          <div className="container">
             <div className="row">
-               <div className="col-lg-12">
+               <div className="col-lg-12 z-above">
                   <div className="content-hero text-center" data-aos="fade-left" data-aos-duration="1000">
                      <h2 className="h-title">
                         Services

@@ -6,7 +6,7 @@ const About = () => {
     const [time, setTime] = useState(0);
     const timer = useRef(null);
     const timer_sec = useRef(null);
-   
+    
     useEffect(() => {
         const $list = document.querySelector('.ListAbout__first')
         const $listItem = document.querySelectorAll('.List-item__first')

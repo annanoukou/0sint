@@ -587,7 +587,7 @@ ion-icon {
 .cursor.active {
   opacity: 1;
   transform: scale(8);
-  mix-blend-mode: difference;
+  mix-blend-mode: saturation;
 }
 
 .cursor.active::before {
@@ -612,6 +612,7 @@ ion-icon {
 .cursor-follower.active {
   opacity: 1;
   transform: scale(0);
+
 }
 
 @media(max-width: 768px) {
@@ -627,6 +628,7 @@ ion-icon {
 }
 
 .btn-draw {
+  
   position: relative;
   display: inline-block;
   vertical-align: middle;
@@ -2661,3 +2663,6 @@ span.error {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.z-above {
+  z-index: 1000;
+}

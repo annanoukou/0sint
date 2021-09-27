@@ -12,10 +12,13 @@ function Footer() {
 
   useEffect(() => {
     function onScroll() {
-      if(window.scrollY > 100){
-        setVisible(true)
-      } else {
+      let offset = window.scrollY
+      offset = offset * 0.4
+
+      if(offset === 0){
         setVisible(false)
+      } else {
+        setVisible(true)
       }
     }
 
