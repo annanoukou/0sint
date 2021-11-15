@@ -18,7 +18,7 @@ import Navbar from './components/Navbar';
 import AOS from 'aos';
 
 function App() {
-
+  require('dotenv').config()
   useEffect(() => {
     AOS.init({
       duration: 800,

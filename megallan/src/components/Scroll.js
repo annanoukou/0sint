@@ -37,7 +37,7 @@ const Scroll = () => {
       
         <>
             <div className="circular-text">
-                <span id="rotated">0sint • 0sint • 0sint • 0sint • 0sint • 0sint •</span>
+                <span id="rotated">INCOGNITA • INCOGNITA • INCOGNITA • </span>
             </div>
 
             <footer className="footer section">

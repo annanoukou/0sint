@@ -2329,6 +2329,14 @@ span.error {
   display: none;
 }
 
+.form-message-warning,
+.form-message-success {
+  display: block;
+  width: 100%;
+  color: white;
+  margin-top: 20px;
+}
+
 #form-message-warning {
   color: #f64b3c;
 }
@@ -2665,4 +2673,104 @@ span.error {
 
 .z-above {
   z-index: 1000;
+}
+
+.newsletter-form {
+  display: flex;
+  margin: 0 auto;
+}
+
+.init__img {
+  width: 784px;
+  position: relative;
+  left: -250px;
+}
+
+.overflow-hd {
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .init__img {
+    width: initial;
+    left: 0;
+    top: -187px;
+  }
+}
+
+.newsletter-input {
+  margin: 0 auto;
+  display: flex;
+}
+
+.newsletter-input {
+  position: relative;
+  width: 66%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  position: relative;
+}
+.newsletter-input > div {
+  width: 100%;
+}
+.newsletter-input > div > div {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.newsletter-input .fa--icon {
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  color: #414145;
+  z-index: 100;
+  font-size: 20px !important;
+}
+.newsletter-input input {
+  width: 100%;
+  color: #808080;
+  border: 0;
+  border-radius: 3rem;
+  padding: 1rem 1.6rem;
+  padding-left: 3.2rem;
+  font-size: 1.2rem;
+}
+.newsletter-input input:focus-visible {
+  outline: none;
+}
+.newsletter-input button {
+  position: absolute;
+  right: -25px;
+  top: 11%;
+  border: 0;
+  margin-right: 2rem;
+  border-radius: 2rem;
+  height: max-content;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6rem 2.2rem;
+  background: #4569f5;
+  background: linear-gradient(100deg, rgba(69, 105, 245, 1) 0%, rgba(139, 163, 255, 1) 100%);
+}
+.newsletter-input .input-group-append {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  background-color: #fbfbfb;
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+.newsletter-input .input-group-append button {
+  margin-right: 2rem;
+  border-radius: 2rem;
+  height: max-content;
+  color: white;
+  font-size: 1rem;
+  padding: 0.6rem 2.2rem;
+  background: #4569f5;
+  background: linear-gradient(100deg, rgba(69, 105, 245, 1) 0%, rgba(139, 163, 255, 1) 100%);
 }

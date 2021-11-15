@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import BIRDS from 'vanta/dist/vanta.fog.min'
 
+import imageLogo from '../assets/images/3014-Incognita-Logo-SH.svg'
 
 function Init() {
 
@@ -86,8 +87,8 @@ function Init() {
         </div>
         <div id="home" className="cover-init">
           <div className="container">
-            <div className="row align-items-center pb-4">
-                <div className="col-md-8">
+            <div className="row align-items-center pb-0 pb-lg-4">
+                <div className="col-12 col-lg-8">
                   <h1 className="heading text-white">Obscured <br></br> <span id="quote">Intelligence</span></h1>
                     <p className="subheading text-white mb-0 mb-md-4">
                       Our mission is to lead a new age of discovery in the Cyber World
@@ -109,6 +110,10 @@ function Init() {
                     </p>
                   <a className="btn-draw btn--white cursor-item mt-3" href="#services"><span className="btn-draw__text"><span>Our services</span></span></a>
                 </div>
+                <div className="col-12 col-lg-4 ">
+                  <img src={imageLogo} className="init__img" alt="Logo image" />
+                </div>
+
             </div>
           </div>
         </div>
