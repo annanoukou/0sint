@@ -108,7 +108,7 @@ function Init() {
                       <br></br>
 
                     </p>
-                  <a className="btn-draw btn--white cursor-item mt-3" href="#services"><span className="btn-draw__text"><span>Our services</span></span></a>
+                  <a className="btn-draw btn--white cursor-item mt-0 mt-md-3" href="#services"><span className="btn-draw__text"><span>Our services</span></span></a>
                 </div>
                 <div className="col-12 col-lg-4 ">
                   <img src={imageLogo} className="init__img" alt="Logo image" />

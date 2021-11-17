@@ -486,7 +486,7 @@ ion-icon {
 
 .cover-init .container,
 .cover-init .container>.row {
-  height: 90vh;
+  height: 85vh;
   min-height: 650px;
 }
 
@@ -510,7 +510,7 @@ ion-icon {
     font-size: 2.5rem;
     color: #fff!important;
     mix-blend-mode: color-burn;
-    margin-top: 60px;
+    margin-top: 125px;
   }
 }
 
@@ -2694,7 +2694,7 @@ span.error {
   .init__img {
     width: initial;
     left: 0;
-    top: -187px;
+    top: -35px;
   }
 }
 
