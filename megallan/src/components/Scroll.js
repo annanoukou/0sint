@@ -8,7 +8,7 @@ const Scroll = () => {
         const circleType = new CircleType(
             document.getElementById("rotated")
         )
-        circleType.radius(50);
+        circleType.radius(55);
 
         let scroll_element = document.querySelector(".circular-text");
         scroll_element.classList.add("d-none")
@@ -37,7 +37,7 @@ const Scroll = () => {
       
         <>
             <div className="circular-text">
-                <span id="rotated">INCOGNITA • INCOGNITA • INCOGNITA • </span>
+            <span id="rotated"> INCOGNITA•INCOGNITA•INCOGNITA• </span>
             </div>
 
             <footer className="footer section">

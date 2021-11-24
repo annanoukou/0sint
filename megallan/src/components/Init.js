@@ -100,7 +100,7 @@ function Init() {
                       dive into the unexplored depths of
 
                       <ul className="Wording-list List">
-                        <li className="List-item is-active">systems</li>
+                        <li className="List-i\tem is-active">systems</li>
                         <li className="List-item">source code</li>
                         <li className="List-item">datasets</li>
                         <li className="List-item">the human mind</li>

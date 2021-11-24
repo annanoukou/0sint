@@ -282,6 +282,10 @@ $animationDuration : .8s;
             // padding: 1.4rem 1.6rem;
         }
 
+        > div > div {
+            bottom: -60px;
+        }
+
         .input-group-append {
             justify-content: center;
             display: flex;
@@ -363,4 +367,11 @@ $animationDuration : .8s;
     .ListAbout__first {
         margin-left: 0;
     }
+}
+
+.rotated_space {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: red;
 }

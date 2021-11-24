@@ -1,5 +1,6 @@
 import React from 'react';
 import * as emailjs from 'emailjs-com';
+import validator from 'validator'
 
 class Contact extends React.Component {
 
@@ -15,18 +16,17 @@ class Contact extends React.Component {
          email: '',
          message: '',
          subject: 'You have a new message from 0sint',
-         notification: false
+         notification: false,
+         emailError: false
      };
    }
-
- 
+  
    handleSubmit(event) {
       event.preventDefault();
 
       this.setState({
          notification: false
       })
-   
 
       const { name, email, message, subject } = this.state;
       const templateParams = {
@@ -37,34 +37,23 @@ class Contact extends React.Component {
          message_html: message,
       };
 
-      emailjs.send(
-         'service_7urnjyw',
-         'template_6alxy13',
-         templateParams,
-         'user_0KL9MIxvcWypVJfzvev8L'
-      )
-     this.resetForm();
- 
-      // const data = new FormData(event.target);
-      // const sgMail = require('@sendgrid/mail');
-      // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-      // const msg = {
-      //   to: '',
-      //   from: data.email,
-      //   subject: 'Sending with SendGrid is Fun',
-      //   text: 'and easy to do anywhere, even with Node.js',
-      //   html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-      // };
-  
-      // sgMail
-      // .send(msg)
-      // .then(() => {}, error => {
-      //    console.error(error);
+      if (validator.isEmail(email)) {
 
-      //    if (error.response) {
-      //       console.error(error.response.body)
-      //    }
-      // });
+         emailjs.send(
+            'service_7urnjyw',
+            'template_6alxy13',
+            templateParams,
+            'user_0KL9MIxvcWypVJfzvev8L'
+         )
+         this.resetForm();
+
+      } else {
+         this.setState({
+            emailError: true,
+            notification: false,
+         });
+      }
+ 
    }
 
    resetForm() {
@@ -72,7 +61,8 @@ class Contact extends React.Component {
          name: '',
          email: '',
          message: '',
-         notification: true
+         notification: true,
+         emailError: false,
       });
    }
 
@@ -155,6 +145,11 @@ class Contact extends React.Component {
                            { this.state.notification && 
                               <div className="form-message-success">
                                  Your message was sent, thank you!
+                              </div>
+                           }
+                           { this.state.emailError && 
+                              <div className="form-message-warning">
+                                 Please enter a valid email.
                               </div>
                            }
                         </form>
