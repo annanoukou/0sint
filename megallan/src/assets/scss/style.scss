@@ -283,7 +283,8 @@ $animationDuration : .8s;
         }
 
         > div > div {
-            bottom: -60px;
+            width: max-content!important;
+            // bottom: -60px;
         }
 
         .input-group-append {
