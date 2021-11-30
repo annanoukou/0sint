@@ -380,3 +380,8 @@ $animationDuration : .8s;
     height: 20px;
     background-color: red;
 }
+
+.disabled {
+    pointer-events: none;
+    opacity: .6;
+}

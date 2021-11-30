@@ -56,10 +56,76 @@ class Newsletter extends React.Component {
     this.setState({ [event.target.name]: event.target.value });
   }
 
-  
+  validateEmail = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      );
+  };
+
+  componentDidMount() {
+    window.addEventListener('load', this.handleLoad);
+  }
+
+  handleLoad() {
+    var element = document.querySelector('#newsletter button')
+    element.disabled = true;
+    element.classList.add("disabled");
+  }
 
   render() {
+
+    const validateEmail = (email) => {
+      return String(email)
+        .toLowerCase()
+        .match(
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    window.addEventListener('keydown', function (evt) {
+
+      // console.log(evt.target.value);
+      // console.log(evt.target.value + evt.key)
+      // console.log(evt.target.value);
+    
+      if(evt.keyCode === 8){
+
+        let str = evt.target.value;
+        let currValue = str.substring(0, str.length - 1);
+
+        let element = document.querySelector('#newsletter button')
+        if(validateEmail(currValue)){
+          element.disabled = true;
+          element.classList.add("disabled");
+        }else{
+          element.disabled = true;
+          element.classList.add("disabled");
+        }
+
+      }else{
+        if (evt.keyCode >= 65 && evt.keyCode <= 90) {
+
+          let currValue = evt.target.value + evt.key;
+
+          let element = document.querySelector('#newsletter button')
+          if(validateEmail(currValue)){
+            element.disabled = false;
+            element.classList.remove("disabled");
+          }else{
+            element.disabled = true;
+            element.classList.add("disabled");
+          }
+
+        }
+      }
+
+    });
+
+
     const { email } = this.state;
+
     const url = "https://gmail.us20.list-manage.com/subscribe/post?u=0406acbf3b606bc5157416a0b&amp;id=f01e2dbf7a";
    
     return (
@@ -67,18 +133,7 @@ class Newsletter extends React.Component {
         <div className="container text-center">
           <p className="mb-40">Sign up for our newsletter to receive product news, updates and special invites.</p>
           <div className="input-group newsletter-input" data-aos="fade-up" data-aos-duration="1200">
-            {/* <form onSubmit={this.handleSubmit} method="post" className="newsletter-form" onSubmit={this.handleSubmit}> */}
-              {/* <input value={email} onChange={this.handleChange} type="text" className="form-control newsletter__sub" name="email" placeholder="Enter Your Email" aria-label="Enter Your Email Address" aria-describedby="button" />
-              <div className="input-group-append">
-                <button className="btn" type="submit" id="button-addon2">Subscribe</button>
-              </div> */}
-              <MailchimpSubscribe url={url}/>
-            {/* </form> */}
-            {/* { this.state.notification && 
-              <div className="form-message-success">
-                Your message was sent, thank you!
-              </div>
-            } */}
+            <MailchimpSubscribe url={url} />
           </div>
         </div>
       </section>
