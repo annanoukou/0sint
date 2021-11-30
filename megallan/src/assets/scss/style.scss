@@ -283,7 +283,11 @@ $animationDuration : .8s;
         }
 
         > div > div {
-            width: max-content!important;
+            // width: max-content!important;
+            font-weight: 300;
+            font-family: "Poppins", sans-serif;
+            font-size: .8rem;
+            line-height: 16px;
             // bottom: -60px;
         }
 
