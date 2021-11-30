@@ -69,9 +69,73 @@ class Contact extends React.Component {
    handleChange(event) {
       this.setState({ [event.target.name]: event.target.value });
    }
+
+   componentDidMount() {
+      window.addEventListener('load', this.handleLoad);
+    }
+  
+   handleLoad() {
+      var element = document.querySelector('#contact button')
+      element.disabled = true;
+      element.classList.add("disabled");
+   }
   
  
    render() {
+
+      const validateEmail = (email) => {
+         return String(email)
+           .toLowerCase()
+           .match(
+             /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+           );
+       };
+   
+       window.addEventListener('keydown', function (evt) {
+   
+         // console.log(evt.target.value);
+         // console.log(evt.target.value + evt.key)
+         // console.log(evt.target.value);
+       
+         if(evt.keyCode === 8){
+   
+            let str = evt.target.value;
+            let currValue = str.substring(0, str.length - 1);
+      
+            let element = document.querySelector('#contact button')
+            let elementEmail = document.querySelector('#contact input[name="email"]')
+            if(validateEmail(currValue)){
+               element.disabled = false;
+               element.classList.remove("disabled");
+               elementEmail.classList.remove("disabledEmail");
+            }else{
+               element.disabled = true;
+               element.classList.add("disabled");
+               elementEmail.classList.add("disabledEmail");
+            }
+   
+         }else{
+            if (evt.keyCode >= 65 && evt.keyCode <= 90) {
+      
+               let currValue = evt.target.value + evt.key;
+      
+               let element = document.querySelector('#contact button')
+               let elementEmail = document.querySelector('#contact input[name="email"]')
+               if(validateEmail(currValue)){
+                  element.disabled = false;
+                  element.classList.remove("disabled");
+                  elementEmail.classList.remove("disabledEmail");
+               }else{
+                  element.disabled = true;
+                  element.classList.add("disabled");
+                  elementEmail.classList.add("disabledEmail");
+               }
+      
+            }
+         }
+   
+      });
+
       const { name, email, message } = this.state;
 
       return (
@@ -130,7 +194,7 @@ class Contact extends React.Component {
                                  <input value={name} onChange={this.handleChange} name="name" type="text" className="form-control" id="name" placeholder="Name" required/>
                               </div>
                               <div className="col-lg-6 form-group">
-                                 <input value={email} onChange={this.handleChange} name="email" type="email" className="form-control" id="email" placeholder="Email" required/>
+                                 <input value={email} onChange={this.handleChange} name="email" type="email" className="form-control-email " id="email" placeholder="Email" required/>
                               </div>
                               <div className="col-lg-12 form-group gsap-reveal">
                                  <textarea value={message} onChange={this.handleChange} name="message" id="message" cols="30" rows="7" className="form-control" placeholder="Write your message..." required></textarea>
